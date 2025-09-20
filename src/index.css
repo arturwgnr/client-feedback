@@ -1,0 +1,304 @@
+/* Reset and full height */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Main container */
+.landing {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #5a60ff, #9a6dff);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+/* Subtle texture */
+.landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/dot-grid.png");
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Content wrapper */
+.landing-content {
+  max-width: 600px;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.landing-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.landing-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Main button */
+.landing-button {
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #5a60ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.landing-button:hover {
+  transform: scale(1.05);
+  background: #f0f0f0;
+}
+
+/*Dash*/
+
+/* Container */
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #8688d3, #723b8b);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Subtle texture */
+.dashboard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/dot-grid.png");
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.dashboard-header:hover {
+  color: #f1f1f1;
+}
+
+.dashboard-logo {
+  color: #7079c4;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Navigation */
+.dashboard-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7079c4;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #616fbb;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Main content */
+.dashboard-main {
+  flex: 1;
+  padding: 2rem;
+  z-index: 1;
+}
+/* Container principal */
+.feedbacks {
+  min-height: 100%;
+  padding: 2rem;
+  background: linear-gradient(135deg, #5a60ff, #9a6dff);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* ---------- Formulário ---------- */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feedback-input {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  min-height: 90px;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.feedback-input::placeholder {
+  color: #e0e0e0;
+  opacity: 0.8;
+}
+
+.feedback-select {
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+.feedback-button {
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #5a60ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.feedback-button:hover {
+  transform: scale(1.05);
+  background: #f0f0f0;
+}
+
+/* ---------- Lista de Feedbacks ---------- */
+.feedback-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feedback-item {
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.feedback-item:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.feedback-content {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.feedback-email {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.feedback-message {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ---------- Sentimento + Ações ---------- */
+.feedback-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feedback-sentiment {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Cores do sentimento */
+.feedback-item.positive .feedback-sentiment {
+  background: #4caf50;
+}
+
+.feedback-item.neutral .feedback-sentiment {
+  background: #ff9800;
+}
+
+.feedback-item.negative .feedback-sentiment {
+  background: #f44336;
+}
+
+/* Botão remover */
+.remove-button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.remove-button:hover {
+  color: #ff4d4d;
+}
